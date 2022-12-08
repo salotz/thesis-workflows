@@ -1,0 +1,89 @@
+sync:
+  defaults:
+    flushOnCreate: true
+    permissions:
+      defaultFileMode: 0644
+      defaultDirectoryMode: 0755
+    ignore:
+      vcs: true      
+      paths:
+        - "_venv"
+        - "_conda_envs"
+        - "__pycache__"
+        - "reports"
+        - "benchmarks"
+        - "build"
+        - "dist"
+        - "info"
+        - "sphinx"
+        - "tests"
+        - ".nox"
+        - ".git"
+        - ".benchmarks"
+        - ".eggs"
+        - "*~"
+      
+  # superior:
+  #   alpha: "../../"
+  #   beta: "dickson.superior:~/tree/lab/projects/seh.pathway_hopping"
+  #   mode: "two-way-resolved"
+
+  hpcc:
+    alpha: "../../"
+    beta: "lotzsamu@rsync.hpcc.msu.edu:/mnt/gs18/scratch/users/lotzsamu/tree/lab/projects/seh.pathway_hopping"
+    mode: "two-way-resolved"
+
+    symlink:
+      mode: ignore
+
+    ignore:
+      vcs: true      
+      paths:
+        - "_*"        
+        - "archive"
+        - "media"
+        - "_conda_envs"
+        - "tmp"
+        - "data"
+        - "cache"
+        - "db"
+        - "hpcc/simulations/*_simulations/test_jobs"
+        - "hpcc/simulations/*_simulations/submissions"
+        - "hpcc/simulations/*_simulations/tasks"          
+        - "jigs"
+        - "*.h5"
+        - "*.dcd"
+        - "*.orch"
+        - ".git"
+        - ".eggs"
+        - "!_*.py"
+        - "!_bin"
+        - "!/_tangle_source"
+        - "*~"
+        
+  wepy-hpcc:
+    alpha: "/home/salotz/tree/lab/devel/wepy"
+    beta: "lotzsamu@rsync.hpcc.msu.edu:/mnt/gs18/scratch/users/lotzsamu/tree/lab/devel/wepy"
+    mode: "two-way-resolved"
+
+    ignore:
+      paths:
+        - "jigs/*/_*"
+
+  geomm-hpcc:
+    alpha: "/home/salotz/tree/lab/devel/geomm"
+    beta: "lotzsamu@rsync.hpcc.msu.edu:/mnt/gs18/scratch/users/lotzsamu/tree/lab/devel/geomm"
+    mode: "two-way-resolved"
+    ignore:
+      paths:
+        - "jigs/*/_*"
+
+  seh-prep-hpcc:
+    alpha: "/home/salotz/tree/lab/devel/seh_prep"
+    beta: "lotzsamu@rsync.hpcc.msu.edu:/mnt/gs18/scratch/users/lotzsamu/tree/lab/devel/seh_prep"
+    mode: "two-way-resolved"
+    ignore:
+      paths:
+        - "jigs/*/_*"
+    
+    

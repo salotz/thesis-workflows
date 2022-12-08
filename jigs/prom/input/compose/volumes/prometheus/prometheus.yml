@@ -1,0 +1,708 @@
+global:
+  scrape_interval:     1s 
+  evaluation_interval: 1s 
+
+# rule_files:
+#   - 'alert.rules'
+
+# alerting:
+#   alertmanagers:
+#   - scheme: http
+#     static_configs:
+#     - targets:
+#       - "alertmanager:9093"
+
+scrape_configs:
+
+  # - job_name: 'self'
+  #   static_configs:
+  #   - targets: ['localhost:9090']
+
+  - job_name: 'node_exporter'
+    static_configs:
+    - targets: ['localhost:9100']
+
+  - job_name: 'nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:9445']
+
+  ### HPCC Jobs
+
+  ## Group 1
+
+  # job 0
+  - job_name: 'job00_node_exporter'
+    static_configs:
+    - targets: ['localhost:50000']
+
+  - job_name: 'job00_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50001']
+
+  - job_name: 'job00_python_client'
+
+    static_configs:
+    - targets: ['localhost:50002']
+
+  # job 1
+  - job_name: 'job01_node_exporter'
+    static_configs:
+    - targets: ['localhost:50010']
+
+  - job_name: 'job01_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50011']
+
+  - job_name: 'job01_python_client'
+
+    static_configs:
+    - targets: ['localhost:50012']
+
+  # job 2
+  - job_name: 'job02_node_exporter'
+    static_configs:
+    - targets: ['localhost:50020']
+
+  - job_name: 'job02_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50021']
+
+  - job_name: 'job02_python_client'
+
+    static_configs:
+    - targets: ['localhost:50022']
+
+  # job3
+  - job_name: 'job03_node_exporter'
+    static_configs:
+    - targets: ['localhost:50030']
+
+  - job_name: 'job03_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50031']
+
+  - job_name: 'job03_python_client'
+
+    static_configs:
+    - targets: ['localhost:50032']
+      
+  # job4
+  - job_name: 'job04_node_exporter'
+    static_configs:
+    - targets: ['localhost:50040']
+
+  - job_name: 'job04_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50041']
+
+  - job_name: 'job04_python_client'
+
+    static_configs:
+    - targets: ['localhost:50042']
+      
+  # job5
+  - job_name: 'job05_node_exporter'
+    static_configs:
+    - targets: ['localhost:50050']
+
+  - job_name: 'job05_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50051']
+
+  - job_name: 'job05_python_client'
+
+    static_configs:
+    - targets: ['localhost:50052']
+
+  ## Group 2
+
+  # job 6
+  - job_name: 'job06_node_exporter'
+    static_configs:
+    - targets: ['localhost:50060']
+
+  - job_name: 'job06_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50061']
+
+  - job_name: 'job06_python_client'
+
+    static_configs:
+    - targets: ['localhost:50062']
+
+  # job 7
+  - job_name: 'job07_node_exporter'
+    static_configs:
+    - targets: ['localhost:50070']
+
+  - job_name: 'job07_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50071']
+
+  - job_name: 'job07_python_client'
+
+    static_configs:
+    - targets: ['localhost:50072']
+
+  # job 8
+  - job_name: 'job08_node_exporter'
+    static_configs:
+    - targets: ['localhost:50080']
+
+  - job_name: 'job08_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50081']
+
+  - job_name: 'job08_python_client'
+
+    static_configs:
+    - targets: ['localhost:50082']
+
+  # job 9
+  - job_name: 'job09_node_exporter'
+    static_configs:
+    - targets: ['localhost:50090']
+
+  - job_name: 'job09_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50091']
+
+  - job_name: 'job09_python_client'
+
+    static_configs:
+    - targets: ['localhost:50092']
+
+  # job 10
+  - job_name: 'job10_node_exporter'
+    static_configs:
+    - targets: ['localhost:50100']
+
+  - job_name: 'job10_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50101']
+
+  - job_name: 'job10_python_client'
+
+    static_configs:
+    - targets: ['localhost:50102']
+      
+  # job 11
+  - job_name: 'job11_node_exporter'
+    static_configs:
+    - targets: ['localhost:50110']
+
+  - job_name: 'job11_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50111']
+
+  - job_name: 'job11_python_client'
+
+    static_configs:
+    - targets: ['localhost:50112']
+
+  ## Group 3    
+      
+  # job 12
+  - job_name: 'job12_node_exporter'
+    static_configs:
+    - targets: ['localhost:50120']
+
+  - job_name: 'job12_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50121']
+
+  - job_name: 'job12_python_client'
+
+    static_configs:
+    - targets: ['localhost:50122']
+
+    # job 13
+  - job_name: 'job13_node_exporter'
+    static_configs:
+    - targets: ['localhost:50130']
+
+  - job_name: 'job13_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50131']
+
+  - job_name: 'job13_python_client'
+
+    static_configs:
+    - targets: ['localhost:50132']
+
+  # job 14
+  - job_name: 'job14_node_exporter'
+    static_configs:
+    - targets: ['localhost:50140']
+
+  - job_name: 'job14_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50141']
+
+  - job_name: 'job14_python_client'
+
+    static_configs:
+    - targets: ['localhost:50142']
+
+  # job 15
+  - job_name: 'job15_node_exporter'
+    static_configs:
+    - targets: ['localhost:50150']
+
+  - job_name: 'job15_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50151']
+
+  - job_name: 'job15_python_client'
+
+    static_configs:
+    - targets: ['localhost:50152']
+
+  # job 16
+  - job_name: 'job16_node_exporter'
+    static_configs:
+    - targets: ['localhost:50160']
+
+  - job_name: 'job16_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50161']
+
+  - job_name: 'job16_python_client'
+
+    static_configs:
+    - targets: ['localhost:50162']
+
+  # job 17
+  - job_name: 'job17_node_exporter'
+    static_configs:
+    - targets: ['localhost:50170']
+
+  - job_name: 'job17_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50171']
+
+  - job_name: 'job17_python_client'
+
+    static_configs:
+    - targets: ['localhost:50172']
+
+
+  ## Misc use jobs
+      
+  # job 18
+  - job_name: 'job18_node_exporter'
+    static_configs:
+    - targets: ['localhost:50180']
+
+  - job_name: 'job18_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50181']
+
+  - job_name: 'job18_python_client'
+
+    static_configs:
+    - targets: ['localhost:50182']
+      
+  # job 19
+  - job_name: 'job19_node_exporter'
+    static_configs:
+    - targets: ['localhost:50190']
+
+  - job_name: 'job19_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50191']
+
+  - job_name: 'job19_python_client'
+
+    static_configs:
+    - targets: ['localhost:50192']
+
+    # job 20
+  - job_name: 'job20_node_exporter'
+    static_configs:
+    - targets: ['localhost:50200']
+
+  - job_name: 'job20_nvidia_gpu_exporter'
+    static_configs:
+    - targets: ['localhost:50201']
+
+  - job_name: 'job20_python_client'
+
+    static_configs:
+    - targets: ['localhost:50202']
+
+      
+  ## Markov Nodes
+  # gateways
+  #   ports: 520${i}0
+  # gpu nodes i:
+  #   ports: 510${i}0
+
+
+  # GPU nodes
+
+  # template
+  # - job_name: 'gpuq_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:510q0']
+
+  # - job_name: 'gpuq_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:510q1']
+
+  # - job_name: 'gpuq_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:510q2']
+
+  # # gpu1
+  # - job_name: 'gpu1_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51010']
+
+  # - job_name: 'gpu1_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51011']
+
+  # - job_name: 'gpu1_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51012']
+
+  # # gpu2
+  # - job_name: 'gpu2_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51020']
+
+  # - job_name: 'gpu2_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51021']
+
+  # - job_name: 'gpu2_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51022']
+      
+  # # gpu3
+  # - job_name: 'gpu3_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51030']
+
+  # - job_name: 'gpu3_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51031']
+
+  # - job_name: 'gpu3_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51032']
+
+  # # gpu4
+  # - job_name: 'gpu4_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51040']
+
+  # - job_name: 'gpu4_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51041']
+
+  # - job_name: 'gpu4_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51042']
+
+  # # gpu5
+  # - job_name: 'gpu5_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51050']
+
+  # - job_name: 'gpu5_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51051']
+
+  # - job_name: 'gpu5_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51052']
+
+  # # gpu6
+  # - job_name: 'gpu6_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51060']
+
+  # - job_name: 'gpu6_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51061']
+
+  # - job_name: 'gpu6_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51062']
+
+  # # gpu7
+  # - job_name: 'gpu7_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51070']
+
+  # - job_name: 'gpu7_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51071']
+
+  # - job_name: 'gpu7_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51072']
+
+  # # gpu8
+  # - job_name: 'gpu8_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51080']
+
+  # - job_name: 'gpu8_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51081']
+
+  # - job_name: 'gpu8_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51082']
+
+  # # gpu9
+  # - job_name: 'gpu9_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51090']
+
+  # - job_name: 'gpu9_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51091']
+
+  # - job_name: 'gpu9_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51092']
+
+  # # gpu10
+  # - job_name: 'gpu10_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51100']
+
+  # - job_name: 'gpu10_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51101']
+
+  # - job_name: 'gpu10_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51102']
+
+  # # gpu11
+  # - job_name: 'gpu11_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51110']
+
+  # - job_name: 'gpu11_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51111']
+
+  # - job_name: 'gpu11_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51112']
+
+  # # gpu12
+  # - job_name: 'gpu12_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51120']
+
+  # - job_name: 'gpu12_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51121']
+
+  # - job_name: 'gpu12_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51122']
+
+  # # gpu13
+  # - job_name: 'gpu13_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51130']
+
+  # - job_name: 'gpu13_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51131']
+
+  # - job_name: 'gpu13_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51132']
+
+  # # gpu14
+  # - job_name: 'gpu14_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51140']
+
+  # - job_name: 'gpu14_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51141']
+
+  # - job_name: 'gpu14_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51142']
+
+  # # gpu15
+  # - job_name: 'gpu15_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51150']
+
+  # - job_name: 'gpu15_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51151']
+
+  # - job_name: 'gpu15_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51152']
+
+  # # gpu16
+  # - job_name: 'gpu16_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51160']
+
+  # - job_name: 'gpu16_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51161']
+
+  # - job_name: 'gpu16_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51162']
+
+  # # gpu17
+  # - job_name: 'gpu17_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51170']
+
+  # - job_name: 'gpu17_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51171']
+
+  # - job_name: 'gpu17_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51172']
+
+  # # gpu18
+  # - job_name: 'gpu18_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51180']
+
+  # - job_name: 'gpu18_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51181']
+
+  # - job_name: 'gpu18_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51182']
+
+  # # gpu19
+  # - job_name: 'gpu19_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51190']
+
+  # - job_name: 'gpu19_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51191']
+
+  # - job_name: 'gpu19_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51192']
+
+  # # gpu20
+  # - job_name: 'gpu20_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51200']
+
+  # - job_name: 'gpu20_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51201']
+
+  # - job_name: 'gpu20_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51202']
+
+  # # gpu21
+  # - job_name: 'gpu21_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51210']
+
+  # - job_name: 'gpu21_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51211']
+
+  # - job_name: 'gpu21_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51212']
+
+  # # gpu22
+  # - job_name: 'gpu22_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51220']
+
+  # - job_name: 'gpu22_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51221']
+
+  # - job_name: 'gpu22_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51222']
+
+  # # gpu23
+  # - job_name: 'gpu23_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51230']
+
+  # - job_name: 'gpu23_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51231']
+
+  # - job_name: 'gpu23_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51232']
+
+  # # gpu24
+  # - job_name: 'gpu24_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51240']
+
+  # - job_name: 'gpu24_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51241']
+
+  # - job_name: 'gpu24_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51242']
+
+  # # gpu25
+  # - job_name: 'gpu25_node_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51250']
+
+  # - job_name: 'gpu25_nvidia_gpu_exporter'
+  #   static_configs:
+  #   - targets: ['localhost:51251']
+
+  # - job_name: 'gpu25_python_client'
+
+  #   static_configs:
+  #   - targets: ['localhost:51252']
+
+      

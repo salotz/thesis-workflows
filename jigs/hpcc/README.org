@@ -1,0 +1,8 @@
+* Syncing files to HPCC
+
+** Set up Mutagen sync
+
+#+begin_src bash
+mutagen project start
+#+end_src
+
