@@ -1,0 +1,28 @@
+joblib
+multiprocessing_logging
+
+eliot-tree
+
+wepy[all]>=1.0.4
+
+# git+https://github.com/ADicksonLab/wepy.git#egg=repo[all]
+# doesn't recognize my egg=repo.. so we do them manually
+
+geomm
+# git+https://github.com/ADicksonLab/geomm.git
+
+# mdtraj
+mdtraj
+
+# distributed
+dask[bag]
+
+# prometheus
+prometheus_client
+pympler
+
+git+https://gitlab.com/salotz/seh_prep.git
+git+https://github.com/salotz/slurmify.git
+
+
+

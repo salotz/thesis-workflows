@@ -1,0 +1,17 @@
+--index-url https://pypi.python.org/simple/
+
+# dependencies
+pip-tools
+
+# debugging
+ipython
+pdbpp
+
+# task running
+invoke
+fabric
+
+multiprocessing_logging
+eliot-tree
+
+git+https://github.com/salotz/slurmify.git

@@ -1,0 +1,8 @@
+media/csns filter=lfs diff=lfs merge=lfs -text
+media/fe_profiles filter=lfs diff=lfs merge=lfs -text
+media/path_microstates filter=lfs diff=lfs merge=lfs -text
+media/pca_com_clouds filter=lfs diff=lfs merge=lfs -text
+media/tmp filter=lfs diff=lfs merge=lfs -text
+media/rates filter=lfs diff=lfs merge=lfs -text
+media/residence_times filter=lfs diff=lfs merge=lfs -text
+media/agg_weights filter=lfs diff=lfs merge=lfs -text

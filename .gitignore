@@ -1,0 +1,71 @@
+# -*- mode: gitignore; -*-
+
+## VMD specifics
+
+# this is an auto save file from the viewmaster plugin
+viewmaster-session.vmd
+
+## Doit stuff
+
+.doit.db.bak
+.doit.db.dat
+.doit.db.dir
+__pycache__
+
+*~
+envs/__mangled*
+
+mutagen.yml.lock
+
+# wepy specific stuff that might be in here from the examples
+*.h5
+*.pkl
+*.log
+*.dcd
+*.orch
+*.sqlite
+
+
+# always keep the .keep files so we preserve directory structure, even
+# if there are no files. This is useful for generating files from some
+# literate file (i.e. building them)
+!**/.keep
+
+# the "build" directories
+/run/
+/prep/
+/troubleshoot/
+/hpcc/scripts
+/hpcc/templates/
+/hpcc/*/submissions/
+/hpcc/*/tasks/
+
+jigs/*/_output
+jigs/*/_tangle_source
+jigs/*/_env
+jigs/*/_bin
+
+# external repos managed by git (should be submodule perhaps)
+
+/seh_prep/
+
+# ignore the "built" library files (prefixed by underscore) not sure
+# if I like this method, but don't want to change it right now
+/lib/**/_*
+
+# python stuff
+__pycache__
+dist
+*.egg-info
+build
+
+# dask
+dask-worker-space
+
+
+
+/hpcc/simulations/*_simulations/test_jobs
+/tmp
+/scratch
+_conda_envs/
+_venvs

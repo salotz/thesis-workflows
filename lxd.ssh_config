@@ -1,0 +1,10 @@
+# -*- mode: ssh-config -*-
+
+Host seh_pathway-hopping.dev
+  HostName seh_pathway-hopping.dev.lxd  
+  IdentityFile ~/.ssh/id_rsa
+  User salotz
+  RequestTTY yes
+  ForwardX11 yes
+  StrictHostKeyChecking no  
+  # RemoteCommand cd ${PWD}

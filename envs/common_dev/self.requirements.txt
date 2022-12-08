@@ -1,0 +1,8 @@
+-e .
+
+-e ${HOME}/tree/lab/devel/wepy[all]
+-e ${HOME}/tree/lab/devel/geomm
+-e ${HOME}/tree/lab/devel/CSNAnalysis
+
+
+-e ${HOME}/tree/lab/devel/seh_prep

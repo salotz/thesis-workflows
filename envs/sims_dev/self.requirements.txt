@@ -1,0 +1,6 @@
+-e .
+
+-e ${TREE}/lab/devel/wepy[all]
+-e ${TREE}/lab/devel/geomm
+-e ${TREE}/lab/devel/seh_prep
+

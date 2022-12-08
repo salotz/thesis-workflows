@@ -1,0 +1,54 @@
+pip
+pip-tools
+ipython
+pdbpp
+invoke
+
+eliot-tree
+multiprocessing_logging
+
+# various non-stable helpers
+git+https://github.com/salotz/slurmify.git
+
+
+# Analytics
+click
+jinja2
+toml
+xmltodict
+tabulate
+
+dask[all]
+# for submitting to SLURM
+dask-jobqueue
+# bokeh is needed for the dask dashboard
+bokeh>=0.13.0
+
+prefect
+
+h5py
+scipy
+sklearn
+
+networkx>2
+sqlalchemy
+numpy
+pandas
+matplotlib
+joblib
+
+mdtraj
+
+# Deps that are in dev
+
+wepy[all]>=1.0.4
+# git+https://github.com/ADicksonLab/wepy.git#egg=repo[all]
+
+geomm
+# git+https://github.com/ADicksonLab/geomm.git
+
+git+https://github.com/ADicksonLab/CSNAnalysis@v0.4
+
+git+https://gitlab.com/salotz/seh_prep.git
+
+

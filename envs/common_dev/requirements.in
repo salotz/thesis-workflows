@@ -1,0 +1,58 @@
+--index-url https://pypi.python.org/simple/
+
+# dependencies
+pip-tools
+
+# debugging
+ipython
+pdbpp
+ipdb
+
+# automation
+jubeo
+invoke
+fabric
+doit
+nox
+
+eliot-tree
+multiprocessing_logging
+
+# various non-stable helpers
+git+https://github.com/salotz/slurmify.git
+
+jinja2
+toml
+
+# analytics
+
+click
+jinja2
+toml
+xmltodict
+tabulate
+
+dask[all]
+# for submitting to SLURM
+dask-jobqueue
+# bokeh is needed for the dask dashboard
+bokeh>=0.13.0
+prefect
+
+h5py
+scipy
+sklearn
+
+networkx>2
+sqlalchemy
+numpy
+pandas
+matplotlib
+joblib
+
+mdtraj
+
+# custom msmbuilder branch: currently I need the commit for which the
+# atom pairs featurizer works
+# git+https://github.com/salotz/msmbuilder@WIP.AtomPairsFeaturizer
+git+https://github.com/salotz/msmbuilder
